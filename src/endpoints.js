@@ -31,6 +31,9 @@ module.exports = {
     News_STW: `https://fortnite-api.com/v2/news/stw`,
     News_Creative: `https://fortnite-api.com/v2/news/creative`,
 
+    Playlists: `https://fortnite-api.com/v1/playlists`,
+    PlaylistID: `https://fortnite-api.com/v1/playlists/`,
+
     Parameters: [{
         "Name": "language",
         "Type": "string",
