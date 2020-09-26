@@ -304,4 +304,27 @@ module.exports = class FortniteAPI {
         const data = await result.json();
         return data; 
     };
+    
+    async Playlists(language) {
+        language = this.CheckLanguage(language);
+        const res = await this.PreRequest(Endpoints.Playlists, { language: language});
+        const result = await fetch(res, this.headers);
+        const data = await result.json();
+        return data; 
+    };
+  
+    async PlaylistID(ID, params) {
+        if (params == {}) {
+            if (this.debug) { console.log("[FortniteAPI.js] 'ID' parameter is empty."); };
+            return false;
+        } else if (!params) {
+            if (this.debug) { console.log("[FortniteAPI.js] Missing 'ID' parameter."); };
+            return false;
+        } else {
+            const res = await this.PreRequest(Endpoints.PlaylistID + ID, params);
+            const result = await fetch(res, this.headers);
+            const data = await result.json();
+            return data;
+        };
+    };
 };
