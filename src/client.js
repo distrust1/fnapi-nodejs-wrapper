@@ -133,6 +133,14 @@ module.exports = class FortniteAPI {
             return data;
         };
     };
+  
+    async BRMap(language) {
+        language = this.CheckLanguage(language);
+        const res = await this.PreRequest(Endpoints.BR_Map, { language: language});
+        const result = await fetch(res, this.headers);
+        const data = await result.json();
+        return data; 
+    };
 
     async BRShop(language) {
         language = this.CheckLanguage(language);
