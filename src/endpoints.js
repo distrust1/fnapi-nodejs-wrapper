@@ -8,6 +8,8 @@ module.exports = {
 
     Banners: `https://fortnite-api.com/v1/banners`,
     Banners_Colors: `https://fortnite-api.com/v1/banners/colors`,
+  
+    BR_Map: `https://fortnite-api.com/v1/map`,
 
     BR_Stats: `https://fortnite-api.com/v1/stats/br/v2`,
     BR_StatsID: `https://fortnite-api.com/v1/stats/br/v2/`,
